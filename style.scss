@@ -1,0 +1,65 @@
+$bgcolor: #111;
+
+@function progress($percent){
+	$deg: $percent/100 * 180;
+	@return #{$deg}deg;
+}
+@mixin cirular-progress($percent, $skill, $color, $bgcolor){ //$bgolor has to be same as bgcolor of site or container 
+	$progress: progress($percent);
+	height: 12rem;
+	width: 12rem;
+	display: inline-block;
+	border-radius: 50%;
+	position: relative; 
+	transform: rotate($progress);
+	background: linear-gradient(
+		0deg,
+		$color 50%,
+		rgba($color,.2) 50%
+	);
+	&:before,&:after{
+		height: 12rem;
+		width: 12rem;
+		position:absolute;
+		top: 0;
+		left: 0;
+		text-align: center;
+		color: $color;
+	}
+	&:before{
+		content: "#{$skill}";
+		background:$bgcolor content-box;
+		border-radius: 50%;
+		padding:.5em;
+		box-sizing:border-box;
+		font-size:2rem;
+		line-height: 8rem; 
+		transform: rotate(-#{$progress});
+	}
+	&:after{
+		content: "#{$percent}%";
+		border-radius: 50%;
+		background: linear-gradient(
+			transparent 50%,
+			$bgcolor 50%
+		);
+		transform:scale(1.1) rotate(-#{$progress});
+		line-height: 13rem;
+	}
+}
+
+body{
+	background-color: $bgcolor;
+}
+
+.circular-progress_1{
+	@include cirular-progress(80, HTML5, yellow, $bgcolor);
+}
+.circular-progress_2{
+	@include cirular-progress(40, SCSS, green, $bgcolor);
+}
+.circular-progress_3{
+	@include cirular-progress(75, javascript, orange, $bgcolor);
+}
+
+
