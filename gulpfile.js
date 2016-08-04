@@ -7,17 +7,7 @@ var gulp = require('gulp'),
     del = require('del');
 
 
-// Clean task, erases all the SABM Module css files 
-gulp.task('clean', function() {
-  return del(['css/site/']);
-});
-
-
 //GULP Default Task, colpiles all Scss files to CSS files
-gulp.task('default', ['clean'], function() {
-  gulp.start('site');
-});
-
 gulp.task('default', function() {
   return gulp.src('*.scss')
       .pipe(sass())

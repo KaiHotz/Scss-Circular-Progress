@@ -1,2 +1,1 @@
 # Circular-Progress
-# Dynamic-Sprites
