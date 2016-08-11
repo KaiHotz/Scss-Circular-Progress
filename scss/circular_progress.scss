@@ -1,0 +1,16 @@
+@import "vars";
+@import "mixin";
+
+body{
+	background-color: $bgcolor;
+}
+
+.circular-progress_1{
+	@include cirular-progress(80, 'Option 1', red, $bgcolor);
+}
+.circular-progress_2{
+	@include cirular-progress(50, 'Option 2', green, $bgcolor);
+}
+.circular-progress_3{
+	@include cirular-progress(75, 'Option 3', orange, $bgcolor);
+}

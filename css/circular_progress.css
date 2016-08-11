@@ -1,0 +1,25 @@
+body { background-color: #fff; }
+
+.circular-progress_1 { height: 12rem; width: 12rem; display: inline-block; border-radius: 50%; position: relative; -webkit-transform: rotate(144deg); transform: rotate(144deg); background: -webkit-linear-gradient(bottom, red 50%, rgba(255, 0, 0, 0.2) 50%); background: linear-gradient(0deg, red 50%, rgba(255, 0, 0, 0.2) 50%); }
+
+.circular-progress_1:before, .circular-progress_1:after { height: 12rem; width: 12rem; position: absolute; top: 0; left: 0; text-align: center; color: red; }
+
+.circular-progress_1:before { content: "Option 1"; background: #fff content-box; border-radius: 50%; padding: .5em; box-sizing: border-box; font-size: 2rem; line-height: 8rem; -webkit-transform: rotate(-144deg); transform: rotate(-144deg); }
+
+.circular-progress_1:after { content: "80%"; border-radius: 50%; background: -webkit-linear-gradient(transparent 50%, #fff 50%); background: linear-gradient(transparent 50%, #fff 50%); -webkit-transform: scale(1.1) rotate(-144deg); transform: scale(1.1) rotate(-144deg); line-height: 13rem; }
+
+.circular-progress_2 { height: 12rem; width: 12rem; display: inline-block; border-radius: 50%; position: relative; -webkit-transform: rotate(90deg); transform: rotate(90deg); background: -webkit-linear-gradient(bottom, green 50%, rgba(0, 128, 0, 0.2) 50%); background: linear-gradient(0deg, green 50%, rgba(0, 128, 0, 0.2) 50%); }
+
+.circular-progress_2:before, .circular-progress_2:after { height: 12rem; width: 12rem; position: absolute; top: 0; left: 0; text-align: center; color: green; }
+
+.circular-progress_2:before { content: "Option 2"; background: #fff content-box; border-radius: 50%; padding: .5em; box-sizing: border-box; font-size: 2rem; line-height: 8rem; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
+
+.circular-progress_2:after { content: "50%"; border-radius: 50%; background: -webkit-linear-gradient(transparent 50%, #fff 50%); background: linear-gradient(transparent 50%, #fff 50%); -webkit-transform: scale(1.1) rotate(-90deg); transform: scale(1.1) rotate(-90deg); line-height: 13rem; }
+
+.circular-progress_3 { height: 12rem; width: 12rem; display: inline-block; border-radius: 50%; position: relative; -webkit-transform: rotate(135deg); transform: rotate(135deg); background: -webkit-linear-gradient(bottom, orange 50%, rgba(255, 165, 0, 0.2) 50%); background: linear-gradient(0deg, orange 50%, rgba(255, 165, 0, 0.2) 50%); }
+
+.circular-progress_3:before, .circular-progress_3:after { height: 12rem; width: 12rem; position: absolute; top: 0; left: 0; text-align: center; color: orange; }
+
+.circular-progress_3:before { content: "Option 3"; background: #fff content-box; border-radius: 50%; padding: .5em; box-sizing: border-box; font-size: 2rem; line-height: 8rem; -webkit-transform: rotate(-135deg); transform: rotate(-135deg); }
+
+.circular-progress_3:after { content: "75%"; border-radius: 50%; background: -webkit-linear-gradient(transparent 50%, #fff 50%); background: linear-gradient(transparent 50%, #fff 50%); -webkit-transform: scale(1.1) rotate(-135deg); transform: scale(1.1) rotate(-135deg); line-height: 13rem; }

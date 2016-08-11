@@ -1,5 +1,3 @@
-$bgcolor: #111;
-
 @function progress($percent){
 	$deg: $percent/100 * 180;
 	@return #{$deg}deg;
@@ -47,19 +45,3 @@ $bgcolor: #111;
 		line-height: 13rem;
 	}
 }
-
-body{
-	background-color: $bgcolor;
-}
-
-.circular-progress_1{
-	@include cirular-progress(80, HTML5, yellow, $bgcolor);
-}
-.circular-progress_2{
-	@include cirular-progress(40, SCSS, green, $bgcolor);
-}
-.circular-progress_3{
-	@include cirular-progress(75, javascript, orange, $bgcolor);
-}
-
-

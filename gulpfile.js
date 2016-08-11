@@ -1,25 +1,27 @@
 var gulp = require('gulp'),
-	  sass = require('gulp-sass'),
+    sass = require('gulp-sass'),
     scss = require('gulp-scss'),
-	  autoprefixer = require('gulp-autoprefixer'),
-	  sourcemaps = require('gulp-sourcemaps'),
+    autoprefixer = require('gulp-autoprefixer'),
+    sourcemaps = require('gulp-sourcemaps'),
     livereload = require('gulp-livereload'),
     del = require('del');
 
 
-//GULP Default Task, colpiles all Scss files to CSS files
-gulp.task('default', function() {
-  return gulp.src('*.scss')
-      .pipe(sass())
-      .pipe(autoprefixer('last 10 version'))
-      .pipe(sourcemaps.write('.'))
-      //.pipe(sass({outputStyle: 'compressed'}))
-      .pipe(gulp.dest('css/'))
+gulp.task('default', ()=> {
+  gulp.src('scss/circular_progress.scss')
+    .pipe(sass({
+        outputStyle: 'compact',
+        sourceComments: false
+      }))
+    .pipe(autoprefixer({
+        versions:['last 10 browsers']
+      }))
+    //.pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('css/'))
 });
 
-
 //Gulp Watch
-gulp.task('watch', function() {
+gulp.task('watch',()=> {
 
   // Watch .scss files
   gulp.watch('scss/site/**/*.scss', ['default']);
