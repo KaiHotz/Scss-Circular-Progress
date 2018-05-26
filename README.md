@@ -7,4 +7,4 @@
 params: cirular-progress(amount of progress, 'Option', color, background color);
 
 
-![circular progress](https://github.com/SpecialKcl/Circular-Progress/blob/master/images/circular_progress.png)
+![circular progress](https://github.com/SpecKaiHotzialKcl/Circular-Progress/blob/master/images/circular_progress.png)
